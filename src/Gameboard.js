@@ -16,5 +16,9 @@ class Gameboard {
             const x = direction === 'horizontal' ? startX + i : startX;
             const y = direction === 'vertical' ? startY + i : startY;
         }
+
+        if (x >= this.size || y >= this.size) {
+            throw new Error('Ship placement out of bounds');
+        }
     }
 }
