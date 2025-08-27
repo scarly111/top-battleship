@@ -7,4 +7,14 @@ class Gameboard {
         this.missedAttacks = [];
         this.board = Array(size).fill(null).map(() => Array(size).fill(null)); // 10x10
     }
+
+    placeShip(length, startX, startY, direction = 'horizontal') {
+        const ship = new Ship(length);
+
+        const positions = [];
+        for (let i = 0; i < length; i++) {
+            const x = direction === 'horizontal' ? startX + i : startX;
+            const y = direction === 'vertical' ? startY + i : startY;
+        }
+    }
 }
