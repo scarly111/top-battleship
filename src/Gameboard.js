@@ -20,5 +20,9 @@ class Gameboard {
         if (x >= this.size || y >= this.size) {
             throw new Error('Ship placement out of bounds');
         }
+
+        if (this.board[y][x] !== null) {
+            throw new Error('Ship placement overlaps another ship');
+        }
     }
 }
