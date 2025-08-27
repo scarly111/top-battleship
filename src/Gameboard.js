@@ -34,4 +34,16 @@ class Gameboard {
 
         this.ships.push({ ship, positions });
     }
+
+    receiveAttack(x, y) {
+        const target = this.board[y][x];
+
+        if (target === null) {
+            this.missedAttacks.push([x, y]);
+            return false; // Miss
+        } else {
+            target.hit();
+            return true; // Hit
+        }
+    }
 }
