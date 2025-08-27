@@ -15,17 +15,17 @@ class Gameboard {
         for (let i = 0; i < length; i++) {
             let x = direction === 'horizontal' ? startX + i : startX;
             let y = direction === 'vertical' ? startY + i : startY;
-        }
 
-        if (x >= this.size || y >= this.size) {
-            throw new Error('Ship placement out of bounds');
-        }
+            if (x >= this.size || y >= this.size) {
+                throw new Error('Ship placement out of bounds');
+            }
 
-        if (this.board[y][x] !== null) {
-            throw new Error('Ship placement overlaps another ship');
-        }
+            if (this.board[y][x] !== null) {
+                throw new Error('Ship placement overlaps another ship');
+            }
 
-        positions.push([x, y]);
+            positions.push([x, y]);
+        }
 
         //place the ship on the board
         positions.forEach(([x, y]) => {
