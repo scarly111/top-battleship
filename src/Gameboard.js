@@ -13,8 +13,8 @@ class Gameboard {
 
         const positions = [];
         for (let i = 0; i < length; i++) {
-            const x = direction === 'horizontal' ? startX + i : startX;
-            const y = direction === 'vertical' ? startY + i : startY;
+            let x = direction === 'horizontal' ? startX + i : startX;
+            let y = direction === 'vertical' ? startY + i : startY;
         }
 
         if (x >= this.size || y >= this.size) {
