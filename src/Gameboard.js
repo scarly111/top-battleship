@@ -24,5 +24,14 @@ class Gameboard {
         if (this.board[y][x] !== null) {
             throw new Error('Ship placement overlaps another ship');
         }
+
+        positions.push([x, y]);
+
+        //place the ship on the board
+        positions.forEach(([x, y]) => {
+            this.board[y][x] = ship;
+        });
+
+        this.ships.push({ ship, positions });
     }
 }
