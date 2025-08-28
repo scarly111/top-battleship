@@ -1,0 +1,15 @@
+import Player from './Player';
+import domController from './domController';
+
+function startGame() {
+    // Players
+    const human = new Player('real')
+    const computer = new Player('computer')
+
+    // Static placement
+    human.gameboard.placeShip(3, 0, 0, 'horizontal');
+    human.gameboard.placeShip(2, 2, 3, 'vertical');
+
+    computer.gameboard.placeShip(3, 5, 5, 'horizontal');
+    computer.gameboard.placeShip(2, 7, 2, 'vertical');
+}
