@@ -12,4 +12,7 @@ function startGame() {
 
     computer.gameboard.placeShip(3, 5, 5, 'horizontal');
     computer.gameboard.placeShip(2, 7, 2, 'vertical');
+
+    // First render
+    domController.renderBoards(human, computer);
 }
