@@ -40,4 +40,15 @@ const domController = (() => {
             }
         }
     }
+    // Bind enemy board clicks
+    function bindEnemyBoardClicks(callback) {
+        enemyBoardEl.addEventListener('click', e => {
+            if (!e.target.classList.contains('cell')) return;
+
+            const x = parseInt(e.target.dataset.x, 10);
+            const y = parseInt(e.target.dataset.y, 10);
+
+            callback(x, y);
+        });
+    }
 })
