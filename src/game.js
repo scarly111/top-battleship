@@ -15,4 +15,14 @@ function startGame() {
 
     // First render
     domController.renderBoards(human, computer);
+
+    // Player click events
+    domController.bindEnemyBoardClicks((x, y) => {
+        // Player attacks
+        const hit = human.attack(computer, x, y);
+
+        // Update boards
+        domController.renderBoards(human, computer);
+
+    })
 }
