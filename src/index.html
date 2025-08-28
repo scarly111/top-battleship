@@ -9,12 +9,18 @@
 </head>
 
 <body>
-    <h1>Battleship</h1>
-    <div id="message"></div>
-    <div class="boards">
-        <div id="player-board" class="board"></div>
-        <div id="enemy-board" class="board"></div>
+    <h1>Battleship Game</h1>
+    <div class="boards-wrapper">
+        <div>
+            <h2>Player Board</h2>
+            <div id="player-board" class="board"></div>
+        </div>
+        <div>
+            <h2>Computer Board</h2>
+            <div id="computer-board" class="board"></div>
+        </div>
     </div>
+    <div id="winner"></div>
     <script type="module">
         import startGame from './game.js';
         startGame();
