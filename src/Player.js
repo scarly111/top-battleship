@@ -1,4 +1,4 @@
-const Gameboard = require('./Gameboard');
+import Gameboard from './Gameboard.js'
 
 class Player {
     constructor(type = 'real', size = 10) {
@@ -32,5 +32,5 @@ class Player {
     }
 }
 
-module.exports = Player;
+export default Player
 

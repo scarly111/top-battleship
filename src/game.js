@@ -1,5 +1,6 @@
-import Player from './Player';
-import domController from './domController';
+import Player from './Player.js';
+import domController from './domController.js';
+
 
 function startGame() {
     // Players
