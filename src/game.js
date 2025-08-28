@@ -24,5 +24,11 @@ function startGame() {
         // Update boards
         domController.renderBoards(human, computer);
 
+        // Is Game Over?
+        if (computer.gameboard.allShipsSunk()) {
+            domController.showWinner('You win!');
+            return;
+        }
+
     })
 }
