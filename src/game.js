@@ -30,5 +30,16 @@ function startGame() {
             return;
         }
 
-    })
+        // Computers turn
+        setTimeout(() => {
+            computer.randomAttack(human);
+            domController.renderBoards(human, computer);
+
+            if (human.gameboard.allShipsSunk()) {
+                domController.showWinner('Computer wins!');
+            }
+        }, 500);
+    });
 }
+
+export default startGame;
