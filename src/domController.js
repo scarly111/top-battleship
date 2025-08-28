@@ -51,4 +51,13 @@ const domController = (() => {
             callback(x, y);
         });
     }
-})
+
+    function showWinner(message) {
+        messageEl.textContent = message;
+    }
+
+    return { renderBoards, bindEnemyBoardClicks, showWinner };
+    
+})();
+
+export default domController;
